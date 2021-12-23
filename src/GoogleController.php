@@ -84,7 +84,7 @@ class GoogleController extends Controller
              */
             $user = $callbackFunction($userId, $userName, $userEmail);
 
-            Auth::login($user);
+            Auth::login($user, true);
             return redirect()->to(self::$redirectAfterLoginRouteName);
         } else if ($request->has("error")) {
             return response()->view("hanakivan.error", [
