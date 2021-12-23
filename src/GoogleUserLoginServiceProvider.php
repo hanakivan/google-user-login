@@ -24,11 +24,11 @@ class GoogleUserLoginServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadRoutesFrom(__DIR__.'/routes.php');
-        //$this->loadViewsFrom(__DIR__.'/views', 'hanakivan');
+        $this->loadViewsFrom(__DIR__.'/views', 'hanakivan');
         $this->loadMigrationsFrom(__DIR__.'/migrations');
 
-        $this->publishes([
+        /*$this->publishes([
             __DIR__.'/views' => resource_path('views/hanakivan'),
-        ]);
+        ]);*/
     }
 }
